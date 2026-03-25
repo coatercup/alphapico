@@ -1,24 +1,74 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Alpha Pico - Manufacturing Automation Solutions</title>    
+    <title>Alpha Pico - Manufacturing Automation Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+    <header class="hero">
+      <div class="container">
+        <h1>Alpha Pico</h1>
+        <p class="tagline">Manufacturing automation solutions for high‑reliability production lines.</p>
+        <a href="#contact" class="btn-primary">Book a consultation</a>
+      </div>
+    </header>
 
+    <main>
+      <section id="services" class="section">
+        <div class="container">
+          <h2>What we do</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Factory automation strategy</h3>
+              <p>End‑to‑end automation roadmaps, from legacy lines to Industry 4.0‑ready plants.</p>
+            </article>
+            <article class="card">
+              <h3>Tool integration & MES</h3>
+              <p>Integrate equipment, MES and data systems to eliminate manual hand‑offs.</p>
+            </article>
+            <article class="card">
+              <h3>Yield & OEE improvement</h3>
+              <p>Use data and automation to improve throughput, reduce scrap and downtime.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-alt">
+        <div class="container">
+          <h2>Why Alpha Pico</h2>
+          <ul class="bullet-list">
+            <li>Decades of hands‑on experience in semiconductor and medical device manufacturing.</li>
+            <li>Deep understanding of cleanroom operations, tool performance and yield engineering.</li>
+            <li>Pragmatic automation projects that pay back in months, not years.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Email us at <a href="mailto:info@alphapico.com">info@alphapico.com</a> to discuss your line, or connect to schedule a call.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alpha Pico. All rights reserved.</p>
+      </div>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
 </html>
